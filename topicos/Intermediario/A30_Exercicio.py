@@ -13,16 +13,32 @@ produtos = [
 aumentado_10 = [{'nome': x['nome'], 'preco':((x['preco']*10) / 100)+ x['preco']} for x in produtos ]
 print('Precos aumentado 10%')
 print(aumentado_10)
+print()
 
 # Gere novos_produtos por deep copy (cópia profunda)
 import copy
+print('Deep copy')
 copiaprofunda_la_ele =  copy.deepcopy(produtos)
-for i in range(15):
-    copiaprofunda_la_ele.append({'nome':f'prd{i}', 'preco':f'preco{i*3/i if i > 0 else 2}'})
-copiaprofunda_la_ele.sort()
 print(copiaprofunda_la_ele)
+print()
 
 # Ordene os produtos por nome decrescente (do maior para menor)
+produtos_ordenados_por_nome = sorted(
+    copy.deepcopy(produtos),
+    key= lambda p: p['nome']
+)
+print('Ordenadoos por nome')
+print(produtos_ordenados_por_nome)
+print()
+
+
+produtos_ordenados_por_preco = sorted(
+    copy.deepcopy(produtos),
+    key= lambda p: p['preco']
+)
+print('Ordenados por preco')
+print(produtos_ordenados_por_preco)
+
 # Gere produtos_ordenados_por_nome por deep copy (cópia profunda)
 
 
@@ -30,4 +46,3 @@ print(copiaprofunda_la_ele)
 # Ordene os produtos por preco crescente (do menor para maior)
 # Gere produtos_ordenados_por_preco por deep copy (cópia profunda)
 
-print(copiaprofunda_la_ele.sort())
