@@ -8,7 +8,7 @@ load_dotenv()
 
 binds = [
     {'bind': 'ctrl+shift+1', 'env_pair': 'SENHA_IGERP'},
-    {'bind': 'ctrl+shift+2', 'env_pair': 'SENHA_SERVIDO'},
+    {'bind': 'ctrl+shift+2', 'env_pair': 'SENHA_SERVIDOR'},
 ]
 
 # tratar binds

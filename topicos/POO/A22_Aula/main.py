@@ -1,0 +1,1 @@
+from eletronico import LogFileMixin, LogPrintMixin
