@@ -35,7 +35,7 @@ class NotificacaoSMS(Notificacao):
 # n = NotificacaoEmail('Texto da notificação boladinha')
 # n.enviar()
 
-def notificar(notificacao: Notificacao):
+def notificar(notificacao: str):
     notificacao_enviada = notificacao.enviar()
 
     if notificacao_enviada:
