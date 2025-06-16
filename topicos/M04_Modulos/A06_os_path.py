@@ -28,7 +28,7 @@ print(diretorio, arquivo)
 caminho_arquivo, extencao_arquivo = os.path.splitext(arquivo)
 print(caminho_arquivo, extencao_arquivo)
 
-# verifica se existe 
+# verifica se existe
 print(os.path.exists(caminho))
 
 # Caminho absoluto da pasta atual

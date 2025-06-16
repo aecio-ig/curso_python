@@ -8,6 +8,6 @@ def sortear_arquivo(caminho_raiz):
     arquivos = listar_arquivos(caminho_raiz)
     return random.choice(arquivos) if arquivos else None  # Retorna None se não houver arquivos
 
-print(sortear_arquivo('.'))
+print('Aprenda: '+ sortear_arquivo('.') + ', e não seja Asno!')
 
 
