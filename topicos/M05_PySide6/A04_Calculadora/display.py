@@ -32,9 +32,8 @@ class Display(QLineEdit):
         isEnter = key in [KEYS.Key_Enter, KEYS.Key_Return]
         isDelet = key in [KEYS.Key_Backspace, KEYS.Key_Delete]
         isEsc = key in [KEYS.Key_Escape]
-        isOperator = key in [KEYS.Key_Plus, KEYS.Key_Minus, KEYS.Key_Slash, KEYS.Key_Asterisk]
+        isOperator = key in [KEYS.Key_Plus, KEYS.Key_Minus, KEYS.Key_Slash, KEYS.Key_Asterisk, KEYS.Key_P]
         
-
 
         if isEnter:
             print('Pressionado enter')
@@ -53,6 +52,8 @@ class Display(QLineEdit):
         
         if isOperator:
             print('Pressionado operator')
+            if text.lower()  == 'p': 
+                text = '^'
             self.clearPressed.emit()
             return event.ignore()
         
